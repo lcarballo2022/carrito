@@ -22,8 +22,11 @@ body{
 .fa-star{
   color: yellow;
 }
+.fa-star-half-stroke{
+  color: yellow;
+}
 #colors{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(112, 110, 110);
 }
 #money{
   color: green;
@@ -39,4 +42,40 @@ body{
 #image{
   border-top: 1px solid black;
   margin: 10% 10% 10% 10%;
+}
+
+.size-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+.nav-link {
+  font-weight: bold;
+}
+.nav-link:hover{
+  
+  color: green!important;
+}
+.line{
+  border-bottom: 1px solid rgb(112, 110, 110);
+}
+.my-3 {
+  margin-top: 1rem!important;
+  margin-bottom: 1rem!important;
+}
+.text-center {
+  text-align: center!important;
+}
+.border-buttom {
+  border: 1px solid rgb(175, 173, 173);
+}
+.btn{
+  border: 1px solid grey;
+}
+.px-0 {
+  padding-right: 0!important;
+  padding-left: 0!important;
+}
+#barraAbajo{
+  border-top: 1px solid black;
 }

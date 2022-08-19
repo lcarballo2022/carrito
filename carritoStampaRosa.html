@@ -404,72 +404,149 @@
 
                             </div>
                             <!--fin producto-->
-
-
                             <div class="card">
+                                <!--Producto 1-->
                                 <div class="card-body row">
-                                    <div class="col-6" src="https://picsum.photos/270/400" alt="product" />
+                                    <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
+                                        <!--la barra de navegacion botones-->
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
+                                                class="active"></button>
+                                            <button type="button" data-bs-target="#caruselIndicador"
+                                                data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#caruselIndicador"
+                                                data-bs-slide-to="2"></button>
+                                        </div>
+                                        <!--item-->
+                                        <div class="carousel-inner ">
+                                            <div class="carousel-item active">
+                                                <!--aca adentro se pone lo q quieras dentro del carusel-->
+    
+                                                <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                            </div>
+                                        </div>
+                                        <!--flechitas para adelante y atras -contrles-->
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#caruselIndicador" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#caruselIndicador" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </button>
+                                    </div>
                                     <div class="col-6">
                                         <h5 class="card-title">procucto 2</h5>
                                         <i class="fa-solid fa-star "></i>
                                         <i class="fa-solid fa-star "></i>
                                         <i class="fa-solid fa-star "></i>
                                         <i class="fa-solid fa-star "></i>
-                                        <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de
-                                            mochila 🎒
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de mochila
+                                            🎒
                                             con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
                                             📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
                                             adentro.<br>
-                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
-                                            para
+                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver para
                                             adentro). <br>
                                         </p>
+                                        <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small></p>
+                                        <div class="d-flex mf-card-btn-container">
+    
+                                            <button type="button" class="btn border-button" id="add"
+                                                onclick="add(1,'prodcuto 1', 'Descripcion 1')">
+                                                <i class="fa-solid fa-cart-shopping"></i>Add to cart
+                                            </button>
+                                            <button type="button" class="btn border-button">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button" class="btn border-button">
+                                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </button>
+                                        </div>
                                     </div>
-
-
+    
+    
                                 </div>
-                                <div class="card-footer">
-
-                                    <button type="button" class="btn btn-light" id="add"
-                                        onclick="add(2,'prodcuto 2', 'Descripcion 2')">
-                                        <i class="fa-solid fa-cart-shopping"></i> Add to cart
-                                    </button>
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body row">
-                                    <img class="col-6" src="https://picsum.photos/270/400" alt="product" />
-                                    <div class="col-6">
-                                        <h5 class="card-title">procucto 2</h5>
-                                        <i class="fa-solid fa-star "></i>
-                                        <i class="fa-solid fa-star "></i>
-                                        <i class="fa-solid fa-star "></i>
-                                        <i class="fa-solid fa-star "></i>
-                                        <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de
-                                            mochila 🎒
-                                            con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
-                                            📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
-                                            adentro.<br>
-                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
-                                            para
-                                            adentro). <br>
-                                        </p>
+                                <!--fin producto-->
+                                <div class="card">
+                                    <!--Producto 1-->
+                                    <div class="card-body row">
+                                        <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
+                                            <!--la barra de navegacion botones-->
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
+                                                    class="active"></button>
+                                                <button type="button" data-bs-target="#caruselIndicador"
+                                                    data-bs-slide-to="1"></button>
+                                                <button type="button" data-bs-target="#caruselIndicador"
+                                                    data-bs-slide-to="2"></button>
+                                            </div>
+                                            <!--item-->
+                                            <div class="carousel-inner ">
+                                                <div class="carousel-item active">
+                                                    <!--aca adentro se pone lo q quieras dentro del carusel-->
+        
+                                                    <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                </div>
+                                            </div>
+                                            <!--flechitas para adelante y atras -contrles-->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#caruselIndicador" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#caruselIndicador" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">procucto 2</h5>
+                                            <i class="fa-solid fa-star "></i>
+                                            <i class="fa-solid fa-star "></i>
+                                            <i class="fa-solid fa-star "></i>
+                                            <i class="fa-solid fa-star "></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                            <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de mochila
+                                                🎒
+                                                con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
+                                                📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
+                                                adentro.<br>
+                                                📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver para
+                                                adentro). <br>
+                                            </p>
+                                            <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small></p>
+                                            <div class="d-flex mf-card-btn-container">
+        
+                                                <button type="button" class="btn border-button" id="add"
+                                                    onclick="add(1,'prodcuto 1', 'Descripcion 1')">
+                                                    <i class="fa-solid fa-cart-shopping"></i>Add to cart
+                                                </button>
+                                                <button type="button" class="btn border-button">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </button>
+                                                <button type="button" class="btn border-button">
+                                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+        
+        
                                     </div>
+                                    <!--fin producto-->
 
-
-                                </div>
-                                <div class="card-footer">
-
-                                    <button type="button" class="btn btn-light" id="add"
-                                        onclick="add(2,'prodcuto 2', 'Descripcion 2')">
-                                        <i class="fa-solid fa-cart-shopping"></i> Add to cart
-                                    </button>
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </div>
-                            </div>
                             <div class="line"></div>
                             <nav aria-label="page">
                                 <ul class="col-12 d-flex justify-content-center align-items-center">

@@ -1,22 +1,31 @@
-  header{
-    border-bottom: 1px solid rgb(150, 145, 145);
+:root{
+  /*psudo elemento : */
+  /* ej hover, active, visited*/
+  /**establecer reglas pre determinadas y variables para usar en la hoja de estilo*/
+  margin: 0px;
+  /* para definir variables se empieza con --*/
+  --line-color: rgb(150, 145, 145);
+  --principal-color: green;
+}
+header{
+    border-bottom: 1px solid  var(--line-color);
   }  
   
 body{
-  accent-color: green; 
+  accent-color:var(--principal-color); 
 }
 #add:hover{
-  background-color: green !important;
+  background-color: var(--principal-color) !important;
   color: white;
 }
 
 .fa-arrow-up-right-from-square:hover{
-  background-color: green !important;
+  background-color: var(--principal-color) !important;
   color: white;
 }
 
 .fa-heart:hover{
-  background-color: green !important;
+  background-color: var(--principal-color) !important;
   color: white;
 }
 .fa-star{
@@ -26,21 +35,21 @@ body{
   color: yellow;
 }
 #colors{
-  border-bottom: 1px solid rgb(112, 110, 110);
+  border-bottom: 1px solid var(--line-color);
 }
 #money{
-  color: green;
+  color: var(--principal-color);
  
 }
 .card {
   border: none;
 }
 .pagination{
-  border-top: 1px solid black;
+ 
   align-items: center;
 }
 #image{
-  border-top: 1px solid black;
+
   margin: 10% 10% 10% 10%;
 }
 
@@ -54,10 +63,10 @@ body{
 }
 .nav-link:hover{
   
-  color: green!important;
+  color: var(--principal-color)!important;
 }
 .line{
-  border-bottom: 1px solid rgb(112, 110, 110);
+  border-bottom: 1px solid var(--line-color);
 }
 .my-3 {
   margin-top: 1rem!important;
@@ -67,15 +76,35 @@ body{
   text-align: center!important;
 }
 .border-buttom {
-  border: 1px solid rgb(175, 173, 173);
+  border: 1px solid var(--line-color);
 }
 .btn{
-  border: 1px solid grey;
+  border: 1px solid var(--line-color);
 }
 .px-0 {
   padding-right: 0!important;
   padding-left: 0!important;
 }
-#barraAbajo{
-  border-top: 1px solid black;
+
+.social-media-container i {
+  margin-right: 2rem;
+  cursor: pointer;
 }
+.my-1 {
+  margin-top: 0.25rem!important;
+  margin-bottom: 0.25rem!important;
+}
+
+.list-group-item{
+  border: none;
+  padding-left: 0;
+}
+#menu-active a{
+  color: var(--principal-color);
+  text-decoration: none;
+}
+#dropdownMenuLink, #btnMenu, #dropdownMenuButton1{
+  border: none;
+  background-color: white;
+}
+

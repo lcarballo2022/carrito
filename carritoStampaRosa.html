@@ -54,9 +54,9 @@
                             <div id="menu" class="collapse navbar-collapse">
                                 <ul class="navbar-nav mx-auto">
                                     <li class="navitem">
-                                        <a href="#" class="nav-link">Home</a>
+                                        <a href="#" class="nav-link menu-active">Home</a>
                                     </li>
-                                    <li class="navitem">
+                                    <li class="navitem"  id="menu-active">
                                         <a href="#" class="nav-link">Women</a>
                                     </li>
                                     <li class="navitem">
@@ -74,9 +74,25 @@
                                 </ul>
                             </div>
                             <div class="d-flex">
-                                <i class="fa-solid fa-shopping-cart"></i><span
-                                    class="badge bg-success top-5 start-100 rounded-circle">3</span>
-                                <i class="fa-solid fa-search"></i>
+                                <div class="dropdown dropstart position-relative">
+                                    <button class="dropdown-toggle cart-dropdown" type="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">
+                                            <div>poner imagen u texto del prod</div>
+                                        </a></li>
+                                      
+                                        </ul>
+                                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-success mf-left-pill">
+                                        3
+                                    </span>
+                                </div>
+                                
+                                <button type="button" class="btn border-button" id="btnMenu">
+                                    <i class="fa-solid fa-search"></i>
+                                    </button>
+                               
                             </div>
                         </div>
                     </nav>
@@ -89,11 +105,11 @@
                     <li class="breadcrumb-item">Home</li>
                     <li class="breadcrumb-item">Page</li>
                     <li class="breadcrumb-item">shop</li>
-                    <li class="breadcrumb-item active"><a href="#">compra</a></li>
+                    <li class="breadcrumb-item" id="menu-active"><a href="#">Compra</a></li>
                 </ol>
             </nav>
         </div>
-        <div class="container">
+        <div class="container fluid">
             <div class="row">
                 <div class="col-4">
                     <!--barra d ela iz-->
@@ -254,33 +270,25 @@
                     <!--Colors-->
                     <div id="colors">
                         <h6>COLORS</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="colors">
-                            <label class="form-check-label" for="colors">
+                        <div class="list-group">
+                            <label class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="">
                                 Black
                             </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="colorsChecked" checked>
-                            <label class="form-check-label" for="colorsChecked">
+                            <label class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" checked>
                                 White
                             </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="colors">
-                            <label class="form-check-label" for="colors">
+                            <label class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="">
                                 Blue
                             </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="colors">
-                            <label class="form-check-label" for="colors">
+                            <label class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="">
                                 Yelow
                             </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="colors">
-                            <label class="form-check-label" for="colors">
+                            <label class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="">
                                 Green
                             </label>
                         </div>
@@ -318,18 +326,60 @@
                     </div>
                     <!--fin topRated-->
                     <!--imagen de abajo-->
-                    <div id="image" class="container px-0 add-img ">
+                    <div class="line"></div>
+                    <div id="image" class="row py-3 position-relative d-flex justify-content-center align-items-center">
 
-                        <img class="col-6" src="https://picsum.photos/60/60" alt="product" />
+                        <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
+                            <!--la barra de navegacion botones-->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="2"></button>
+                            </div>
+                            <!--item-->
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active">
+                                    <!--aca adentro se pone lo q quieras dentro del carusel-->
+
+                                    <img src="https://picsum.photos/60/60" alt="imagen" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/60/60" alt="imagen" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/60/60" alt="imagen" class="d-block w-100">
+                                </div>
+                            </div>
+                            <!--flechitas para adelante y atras -contrles-->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#caruselIndicador"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#caruselIndicador"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
 
                     </div>
+                    <div class="line"></div>
                 </div>
                 <div class="col-8">
                     <div class="conteiner row">
                         <div class="col-9">Showing 1-12 of 44 results</div>
                         <div class="col-2">Sort by</div>
-                        <div class="col-1">News</div>
+                        <div class="dropdown col-1">
+                            <button class="btn drowpdown-toggle" id="dropdownMenuLink"   data-bs-toggle="dropdown">News</button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"  class="dropdown-item">Menu 1</a></li>
+                                <li><a href="#"  class="dropdown-item">Menu 2</a></li>
+                                <li><a href="#"  class="dropdown-item">Menu 3</a></li>
+                            </ul>
+                
+                          </div>
                     </div>
+                    
                     <div class="line"></div>
                     <div class="row">
                         <!-- CARD PRODUCTO : Alternativa bootstrap nativa-->
@@ -410,8 +460,8 @@
                                     <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
                                         <!--la barra de navegacion botones-->
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
-                                                class="active"></button>
+                                            <button type="button" data-bs-target="#caruselIndicador"
+                                                data-bs-slide-to="0" class="active"></button>
                                             <button type="button" data-bs-target="#caruselIndicador"
                                                 data-bs-slide-to="1"></button>
                                             <button type="button" data-bs-target="#caruselIndicador"
@@ -421,14 +471,17 @@
                                         <div class="carousel-inner ">
                                             <div class="carousel-item active">
                                                 <!--aca adentro se pone lo q quieras dentro del carusel-->
-    
-                                                <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+
+                                                <img src="https://picsum.photos/270/400" alt="imagen"
+                                                    class="d-block w-100">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                <img src="https://picsum.photos/270/400" alt="imagen"
+                                                    class="d-block w-100">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                <img src="https://picsum.photos/270/400" alt="imagen"
+                                                    class="d-block w-100">
                                             </div>
                                         </div>
                                         <!--flechitas para adelante y atras -contrles-->
@@ -448,17 +501,20 @@
                                         <i class="fa-solid fa-star "></i>
                                         <i class="fa-solid fa-star "></i>
                                         <i class="fa-solid fa-star-half-stroke"></i>
-                                        <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de mochila
+                                        <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de
+                                            mochila
                                             🎒
                                             con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
                                             📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
                                             adentro.<br>
-                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver para
+                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
+                                            para
                                             adentro). <br>
                                         </p>
-                                        <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small></p>
+                                        <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small>
+                                        </p>
                                         <div class="d-flex mf-card-btn-container">
-    
+
                                             <button type="button" class="btn border-button" id="add"
                                                 onclick="add(1,'prodcuto 1', 'Descripcion 1')">
                                                 <i class="fa-solid fa-cart-shopping"></i>Add to cart
@@ -471,8 +527,8 @@
                                             </button>
                                         </div>
                                     </div>
-    
-    
+
+
                                 </div>
                                 <!--fin producto-->
                                 <div class="card">
@@ -481,8 +537,8 @@
                                         <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
                                             <!--la barra de navegacion botones-->
                                             <div class="carousel-indicators">
-                                                <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
-                                                    class="active"></button>
+                                                <button type="button" data-bs-target="#caruselIndicador"
+                                                    data-bs-slide-to="0" class="active"></button>
                                                 <button type="button" data-bs-target="#caruselIndicador"
                                                     data-bs-slide-to="1"></button>
                                                 <button type="button" data-bs-target="#caruselIndicador"
@@ -492,14 +548,17 @@
                                             <div class="carousel-inner ">
                                                 <div class="carousel-item active">
                                                     <!--aca adentro se pone lo q quieras dentro del carusel-->
-        
-                                                    <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+
+                                                    <img src="https://picsum.photos/270/400" alt="imagen"
+                                                        class="d-block w-100">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                    <img src="https://picsum.photos/270/400" alt="imagen"
+                                                        class="d-block w-100">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
+                                                    <img src="https://picsum.photos/270/400" alt="imagen"
+                                                        class="d-block w-100">
                                                 </div>
                                             </div>
                                             <!--flechitas para adelante y atras -contrles-->
@@ -519,17 +578,21 @@
                                             <i class="fa-solid fa-star "></i>
                                             <i class="fa-solid fa-star "></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                            <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de mochila
+                                            <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de
+                                                mochila
                                                 🎒
                                                 con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
-                                                📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
+                                                📌Sobrecito personalizado con el nombre calado en el sobre para mirar
+                                                para
                                                 adentro.<br>
-                                                📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver para
+                                                📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para
+                                                ver para
                                                 adentro). <br>
                                             </p>
-                                            <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small></p>
+                                            <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt
+                                                    teen</small></p>
                                             <div class="d-flex mf-card-btn-container">
-        
+
                                                 <button type="button" class="btn border-button" id="add"
                                                     onclick="add(1,'prodcuto 1', 'Descripcion 1')">
                                                     <i class="fa-solid fa-cart-shopping"></i>Add to cart
@@ -542,112 +605,129 @@
                                                 </button>
                                             </div>
                                         </div>
-        
-        
+
+
                                     </div>
                                     <!--fin producto-->
-
-                            <div class="line"></div>
-                            <nav aria-label="page">
-                                <ul class="col-12 d-flex justify-content-center align-items-center">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                            <div class="line"></div>
-
-                            <div class="conteiner row">
-                                <div class="col-8">Texto de abajo del todo adelante de los inconos</div>
-                                <div class="col-4">
-                                    <div class="d-flex float-end gap-3">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                        <i class="fa-brands fa-twitter"></i>
-                                        <i class="fa-brands fa-instagram"></i>
-                                        <i class="fa-brands fa-youtube"></i>
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </div>
                                 </div>
+
+                                <div class="line"></div>
+                                <nav aria-label="page">
+                                    <ul class="col-12 d-flex justify-content-center align-items-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
-
-
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        <div class="linea"></div>
-        <div class="row my-3" id="barraAbajo">
-            <div class="col-12 col-md-3 text-center">
-                <h5>INFORMATION</h5>
-                <p>Delivery information</p>
-                <p>Discuount</p>
-                <p>Privacy policy</p>
-                <p>My account</p>
-            </div>
-            <div class="col-12 col-md-3 text-center">
-                <h5>MY ACCOUNT</h5>
-                <p>Sign in</p>
-                <p>View Cart</p>
-                <p>My wishlist</p>
-                <p>Check out</p>
-                <p>Track my order</p>
-            </div>
-            <div class="col-12 col-md-3 text-center">
-                <h5>HELP</h5>
-                <p>F.A.Q.</p>
-                <p>Shipping</p>
-                <p>Contact us</p>
-                <p>Privacy policy</p>
-            </div>
-            <div class="col-12 col-md-3 text-center">
-                <h5>CONTACT INFO</h5>
-                <p><i class="fa-solid fa-house me-2"></i>
-                    1234 Your adress, Country </p>
-                    <p><i class="fa-solid fa-phone me-2"></i>
-                    +52 454 4545 454</p>
-                <p><i class="fa-solid fa-envelope me-2"></i>
-                    juanit@gmail.com</p>
+        <div class="line"></div>
+        
+        <div class="conteiner row">
+            <div class="col-12 col-md-8 my-1">Texto de abajo del todo adelante de los inconos</div>
+            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center social-media-container  my-1">
+
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
 
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg bg-dark mb-0">
-            <div class="container-fluid text-white">
-                <div class="col-6 justify-content-start gap-3">
-                    <p>Copyright 2022 - All rights reserved </p>
-                </div>
-                <div class="d-flex float-end gap-3">
-                    <i class="fa-brands fa-cc-visa"></i>
-                    <i class="fa-brands fa-cc-paypal"></i>
-                    <i class="fa-brands fa-cc-amazon-pay"></i>
-                    <i class="fa-brands fa-cc-mastercard"></i>
-                    <i class="fa-brands fa-cc-stripe"></i>
-                </div>
+
+        <div class="line"></div>
+    </div>
+
+
+
+
+
+    </div>
+    <div class="linea"></div>
+    <div class="row my-3" id="barraAbajo">
+        <div class="col-12 col-md-3 text-center">
+            <h5>INFORMATION</h5>
+            <p>Delivery information</p>
+            <p>Discuount</p>
+            <p>Privacy policy</p>
+            <p>My account</p>
+        </div>
+        <div class="col-12 col-md-3 text-center">
+            <h5>MY ACCOUNT</h5>
+            <p>Sign in</p>
+            <p>View Cart</p>
+            <p>My wishlist</p>
+            <p>Check out</p>
+            <p>Track my order</p>
+        </div>
+        <div class="col-12 col-md-3 text-center">
+            <h5>HELP</h5>
+            <p>F.A.Q.</p>
+            <p>Shipping</p>
+            <p>Contact us</p>
+            <p>Privacy policy</p>
+        </div>
+        <div class="col-12 col-md-3 text-center">
+            <h5>CONTACT INFO</h5>
+            <p><i class="fa-solid fa-house me-2"></i>
+                1234 Your adress, Country </p>
+            <p><i class="fa-solid fa-phone me-2"></i>
+                +52 454 4545 454</p>
+            <p><i class="fa-solid fa-envelope me-2"></i>
+                juanit@gmail.com</p>
+
+        </div>
+    </div>
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg bg-dark mt-0">
+        <div class="container-fluid text-white">
+            <!--datos de contacto-->
+            <div class="d-flex justify-content-start align-center gap-3">
+                <p>Copyright 2022 - All rights reserved </p><b>Luz</b>
             </div>
-        </nav>
-        <script src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <div class="d-flex float-end gap-3">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-amazon-pay"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-stripe"></i>
+            </div>
+        </div>
+
+    </nav>
+
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+      <!-- jquery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+      <!-- sweetalert2 -->
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--incluri un file externo-->
         <script src="js/carrito.js"></script>
-        <!--incluri un file externo-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"></script>
+    
+    
 </body>
 
 </html>

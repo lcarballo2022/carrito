@@ -56,7 +56,7 @@
                                     <li class="navitem">
                                         <a href="#" class="nav-link menu-active">Home</a>
                                     </li>
-                                    <li class="navitem"  id="menu-active">
+                                    <li class="navitem" id="menu-active">
                                         <a href="#" class="nav-link">Women</a>
                                     </li>
                                     <li class="navitem">
@@ -75,24 +75,26 @@
                             </div>
                             <div class="d-flex">
                                 <div class="dropdown dropstart position-relative">
-                                    <button class="dropdown-toggle cart-dropdown" type="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="dropdown-toggle cart-dropdown" type="" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false" onclick="show()">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">
-                                            <div>poner imagen u texto del prod</div>
-                                        </a></li>
-                                      
-                                        </ul>
-                                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-success mf-left-pill">
-                                        3
+                                        <li><a class="dropdown-item" href="#" >
+                                                <div id="comprado"></div>
+                                            </a></li>
+
+                                    </ul>
+                                    <span
+                                        class="position-absolute top-0 translate-middle badge rounded-pill bg-success left-pill"  id="catBuys">
+                                        0
                                     </span>
                                 </div>
-                                
+
                                 <button type="button" class="btn border-button" id="btnMenu">
                                     <i class="fa-solid fa-search"></i>
-                                    </button>
-                               
+                                </button>
+
                             </div>
                         </div>
                     </nav>
@@ -111,7 +113,7 @@
         </div>
         <div class="container fluid">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4" id="barraLeft">
                     <!--barra d ela iz-->
                     <h6>Categorias</h6>
 
@@ -306,7 +308,7 @@
                                 </div>
 
                             </div>
-                            <div class="card-body row">
+                            <div class="card-body row mobile">
                                 <img class="col-6" src="https://picsum.photos/30/30" alt="product" />
                                 <div class="col-6">
                                     <p class="card-title">producto 1</p>
@@ -314,7 +316,7 @@
                                 </div>
 
                             </div>
-                            <div class="card-body row">
+                            <div class="card-body row mobile">
                                 <img class="col-6" src="https://picsum.photos/30/30" alt="product" />
                                 <div class="col-6">
                                     <p class="card-title">producto 1</p>
@@ -365,25 +367,27 @@
                     </div>
                     <div class="line"></div>
                 </div>
-                <div class="col-8">
+
+                <div class="col-8 panelCenter center-mobile">
                     <div class="conteiner row">
                         <div class="col-9">Showing 1-12 of 44 results</div>
                         <div class="col-2">Sort by</div>
                         <div class="dropdown col-1">
-                            <button class="btn drowpdown-toggle" id="dropdownMenuLink"   data-bs-toggle="dropdown">News</button>
+                            <button class="btn drowpdown-toggle" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown">News</button>
                             <ul class="dropdown-menu">
-                                <li><a href="#"  class="dropdown-item">Menu 1</a></li>
-                                <li><a href="#"  class="dropdown-item">Menu 2</a></li>
-                                <li><a href="#"  class="dropdown-item">Menu 3</a></li>
+                                <li><a href="#" class="dropdown-item">Menu 1</a></li>
+                                <li><a href="#" class="dropdown-item">Menu 2</a></li>
+                                <li><a href="#" class="dropdown-item">Menu 3</a></li>
                             </ul>
-                
-                          </div>
+
+                        </div>
                     </div>
-                    
+
                     <div class="line"></div>
                     <div class="row">
                         <!-- CARD PRODUCTO : Alternativa bootstrap nativa-->
-                        <div class="card">
+                        <div class="card mb-3 ">
                             <!--Producto 1-->
                             <div class="card-body row">
                                 <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
@@ -427,19 +431,22 @@
                                     <i class="fa-solid fa-star "></i>
                                     <i class="fa-solid fa-star "></i>
                                     <i class="fa-solid fa-star-half-stroke"></i>
-                                    <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de mochila
+                                    <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de
+                                        mochila
                                         🎒
                                         con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
                                         📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
                                         adentro.<br>
-                                        📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver para
+                                        📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
+                                        para
                                         adentro). <br>
                                     </p>
-                                    <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small></p>
-                                    <div class="d-flex mf-card-btn-container">
+                                    <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small>
+                                    </p>
+                                    <div class="d-flex card-btn-container">
 
                                         <button type="button" class="btn border-button" id="add"
-                                            onclick="add(1,'prodcuto 1', 'Descripcion 1')">
+                                            onclick="add(1,'prodcuto 1', 'Descripcion 1',200)">
                                             <i class="fa-solid fa-cart-shopping"></i>Add to cart
                                         </button>
                                         <button type="button" class="btn border-button">
@@ -505,18 +512,21 @@
                                             mochila
                                             🎒
                                             con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
-                                            📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
+                                            📌Sobrecito personalizado con el nombre calado en el sobre para mirar
+                                            para
                                             adentro.<br>
-                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
+                                            📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para
+                                            ver
                                             para
                                             adentro). <br>
                                         </p>
-                                        <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small>
+                                        <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt
+                                                teen</small>
                                         </p>
-                                        <div class="d-flex mf-card-btn-container">
+                                        <div class="d-flex card-btn-container">
 
                                             <button type="button" class="btn border-button" id="add"
-                                                onclick="add(1,'prodcuto 1', 'Descripcion 1')">
+                                                onclick="add(1,'prodcuto 1', 'Descripcion 2',250)">
                                                 <i class="fa-solid fa-cart-shopping"></i>Add to cart
                                             </button>
                                             <button type="button" class="btn border-button">
@@ -578,23 +588,26 @@
                                             <i class="fa-solid fa-star "></i>
                                             <i class="fa-solid fa-star "></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                            <p class="card-text">Promo Egresados con nuestros souvenir de tiradores de
+                                            <p class="card-text">Promo Egresados con nuestros souvenir de tiradores
+                                                de
                                                 mochila
                                                 🎒
                                                 con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
-                                                📌Sobrecito personalizado con el nombre calado en el sobre para mirar
+                                                📌Sobrecito personalizado con el nombre calado en el sobre para
+                                                mirar
                                                 para
                                                 adentro.<br>
-                                                📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para
+                                                📌Incluye sobrecito con manchitas y Egresados año + nombre calado
+                                                (para
                                                 ver para
                                                 adentro). <br>
                                             </p>
                                             <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt
                                                     teen</small></p>
-                                            <div class="d-flex mf-card-btn-container">
+                                            <div class="d-flex card-btn-container">
 
                                                 <button type="button" class="btn border-button" id="add"
-                                                    onclick="add(1,'prodcuto 1', 'Descripcion 1')">
+                                                    onclick="add(1,'prodcuto 1', 'Descripcion 1',300)">
                                                     <i class="fa-solid fa-cart-shopping"></i>Add to cart
                                                 </button>
                                                 <button type="button" class="btn border-button">
@@ -631,13 +644,12 @@
                                 </nav>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
         <div class="line"></div>
-        
+
         <div class="conteiner row">
             <div class="col-12 col-md-8 my-1">Texto de abajo del todo adelante de los inconos</div>
             <div class="col-12 col-md-4 d-flex align-items-center justify-content-center social-media-container  my-1">
@@ -716,18 +728,18 @@
 
     </nav>
 
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <!-- Option 1: Bootstrap Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
-      <!-- jquery -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
-      <!-- sweetalert2 -->
-      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!-- jquery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+ <!-- sweetalert2 -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--incluri un file externo-->
-        <script src="js/carrito.js"></script>
-    
-    
+    <script src="js/carrito.js"></script>
+
+
 </body>
 
 </html>

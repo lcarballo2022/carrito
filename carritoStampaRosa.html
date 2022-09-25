@@ -73,14 +73,16 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-3 d-flex align-items-center navbar-icons-container flex-row-reverse" >
+                            <div
+                                class="col-12 col-md-3 d-flex align-items-center navbar-icons-container flex-row-reverse">
                                 <div class="dropdown dropstart position-relative">
-                                    <button class="dropdown-toggle cart-dropdown position-relative" type="" id="dropdownMenuButton1"
-                                        data-bs-toggle="dropdown" aria-expanded="false" >
+                                    <button class="dropdown-toggle cart-dropdown position-relative" type=""
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </button>
-                                    <ul class="dropdown-menu dropdown-menu-start " aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#" >                                               
+                                    <ul class="dropdown-menu dropdown-menu-start "
+                                        aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">
                                                 <main id="items" class="col-sm-8 row"></main>
                                                 <!-- Carrito -->
                                                 <aside class="col-sm-2">
@@ -89,20 +91,21 @@
                                                     <ul id="carrito" class="list-group"></ul>
                                                     <hr>
                                                     <!-- Precio total -->
-                                                    <p class="text-right">Total: <span id="total"></span>$</p>
-                                                    <button id="boton-vaciar" class="btn btn-danger"  onclick="vaciarCarrito()"">Vaciar</button>
+                                                    <p class="text-right">Total: <span id="total"></span></p>
+                                                    <button id="boton-vaciar" class="btn btn-danger"
+                                                        onclick="vaciarCarrito()"">Vaciar</button>
                                                 </aside>
                                             </a></li>
 
                                     </ul>
                                     <span
-                                        class="position-absolute top-0 translate-middle badge rounded-pill bg-success left-pill"
-                                        id="catBuys">
-                                        0
-                                    </span>
+                                        class=" position-absolute top-0 translate-middle badge rounded-pill bg-success
+                                                        left-pill" id="catBuys">
+                                                        0
+                                                        </span>
                                 </div>
 
-                                <button type="button" class="btn border-button" id="btnMenu" >
+                                <button type="button" class="btn border-button" id="btnMenu">
                                     <i class="fa-solid fa-search"></i>
                                 </button>
 
@@ -126,7 +129,7 @@
             <div class="row">
                 <div class="col-3" id="barraLeft">
                     <!--barra d ela iz-->
-                    <h6>Categorias</h6>
+                    <h6 name="fw-bold">Categorias</h6>
 
                     <div class="accordion accordion-flush" id="accordionFlushCategories">
                         <div class="accordion-item">
@@ -143,7 +146,7 @@
                                 <div class="accordion-body">talle 4</div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="accordionFlushDress">
                             <h2 class="accordion-header" id="flush-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseTwo" aria-expanded="false"
@@ -152,13 +155,13 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushCategories">
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushDress">
                                 <div class="accordion-body">rojo</div>
                                 <div class="accordion-body">verde</div>
                                 <div class="accordion-body">azul</div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="accordionFlushWomen">
                             <h2 class="accordion-header" id="flush-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseThree" aria-expanded="false"
@@ -167,143 +170,154 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushCategories">
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushWomen">
                                 <div class="accordion-body">marca 1</div>
                                 <div class="accordion-body">marca 2</div>
                                 <div class="accordion-body">marca 3</div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
+                        <div class="accordion-item" id="accordionFlushMen">
+                            <h2 class="accordion-header" id="flush-headingMen">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Men(13)
+                                    data-bs-target="#flush-collapseMen" aria-expanded="false"
+                                    aria-controls="flush-collapseMen">
+                                    Men(3)
                                 </button>
                             </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushCategories">
+                            <div id="flush-collapseMen" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingMen" data-bs-parent="#accordionFlushMen">
                                 <div class="accordion-body">marca 1</div>
                                 <div class="accordion-body">marca 2</div>
                                 <div class="accordion-body">marca 3</div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
+
+
+                        <div class="accordion-item" id="accordionFlushWatch">
+                            <h2 class="accordion-header" id="flush-headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
                                     Watch(13)
                                 </button>
                             </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushCategories">
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushWatch">
                                 <div class="accordion-body">marca 1</div>
                                 <div class="accordion-body">marca 2</div>
                                 <div class="accordion-body">marca 3</div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
+                        <div class="accordion-item" id="accordionFlushClothing">
+                            <h2 class="accordion-header" id="flush-headingClothing">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
+                                    data-bs-target="#flush-collapseClothing" aria-expanded="false"
+                                    aria-controls="flush-collapseClothing">
                                     Clothing(5)
                                 </button>
                             </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushCategories">
+                            <div id="flush-collapseClothing" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingClothing" data-bs-parent="#accordionFlushClothing">
                                 <div class="accordion-body">marca 1</div>
                                 <div class="accordion-body">marca 2</div>
                                 <div class="accordion-body">marca 3</div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
+                        <div class="accordion-item" id="accordionFlushBags">
+                            <h2 class="accordion-header" id="flush-headingBags">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
+                                    data-bs-target="#flush-collapseBags" aria-expanded="false"
+                                    aria-controls="flush-collapseBags">
                                     Bags(5)
                                 </button>
                             </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushCategories">
+                            <div id="flush-collapseBags" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingBags" data-bs-parent="#accordionFlushBags">
                                 <div class="accordion-body">marca 1</div>
                                 <div class="accordion-body">marca 2</div>
                                 <div class="accordion-body">marca 3</div>
                             </div>
                         </div>
                     </div>
-                    <!--Filtros de precio-->
-                    <h6>Filtro de precio</h6>
-                    <input type="range"><br>
-                    <div class="btn-group" role="group" aria-label="Rango de precios">
-                        <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off"
-                            checked>
-                        <label class="btn btn-outline-success" for="btnradio1">10</label>
+                    <div class="row border-bottom py-3">
+                        <h6 name="fw-bold">Filtro de precio</h6>
+                        <input type="range"><br>
+                        <div class="btn-group" role="group" aria-label="Rango de precios">
+                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off"
+                                checked>
+                            <label class="btn btn-outline-success" for="btnradio1">10</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradio2">200</label>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradio2">200</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradio3"><i
-                                class="fa-solid fa-magnifying-glass"></i></label>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradio3"><i
+                                    class="fa-solid fa-magnifying-glass"></i></label>
+                        </div>
                     </div>
-                    <!--Fin Filtros de precio-->
+
                     <!--Size-->
-                    <h6>Size</h6>
-                    <div class="size-container" id="size" role="group" aria-label="Tamaño">
+                    <div class="row border-bottom py-3">
+                        <h6 name="fw-bold">Size</h6>
+                        <div class="size-container" id="size" role="group" aria-label="Tamaño">
 
-                        <input type="radio" class="btn-check " name="btnradioSize" id="btnradioSize1"
-                            autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradioSize1">XS</label>
-                        <input type="radio" class="btn-check  " name="btnradioSize" id="btnradioSize2"
-                            autocomplete="off" checked>
-                        <label class="btn btn-outline-success" for="btnradioSize2">S</label>
-
-
-                        <input type="radio" class="btn-check  " name="btnradioSize" id="btnradioSize3"
-                            autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradioSize3">M</label>
-
-                        <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSizes" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradioSize4">L</label>
-                        <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSize5" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradioSize4">X</label>
-
-                        <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSize5" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradioSize5">XL</label>
-
-                        <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSize6" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradioSize6">XXL</label>
+                            <input type="radio" class="btn-check " name="btnradioSize" id="btnradioSize1"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradioSize1">XS</label>
+                            <input type="radio" class="btn-check  " name="btnradioSize" id="btnradioSize2"
+                                autocomplete="off" checked>
+                            <label class="btn btn-outline-success" for="btnradioSize2">S</label>
 
 
+                            <input type="radio" class="btn-check  " name="btnradioSize" id="btnradioSize3"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradioSize3">M</label>
+
+                            <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSizes"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradioSize4">L</label>
+                            <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSize5"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradioSize4">X</label>
+
+                            <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSize5"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradioSize5">XL</label>
+
+                            <input type="radio" class="btn-check" name="btnradioSize" id="btnradioSize6"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradioSize6">XXL</label>
+
+
+                        </div>
                     </div>
                     <!--Fin Size-->
                     <!--Colors-->
-                    <div id="colors">
-                        <h6>COLORS</h6>
-                        <div class="list-group">
-                            <label class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="">
-                                Black
-                            </label>
-                            <label class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" checked>
-                                White
-                            </label>
-                            <label class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="">
-                                Blue
-                            </label>
-                            <label class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="">
-                                Yelow
-                            </label>
-                            <label class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="">
-                                Green
-                            </label>
+                    <div class="row border-bottom py-3">
+                        <div id="colors">
+                            <h6 name="fw-bold">COLORS</h6>
+                            <div class="list-group">
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Black
+                                </label>
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" checked>
+                                    White
+                                </label>
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Blue
+                                </label>
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Yelow
+                                </label>
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Green
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <!--Fin Colors-->
@@ -314,7 +328,7 @@
                             <div class="card-body row">
                                 <img class="col-6" src="https://picsum.photos/30/30" alt="product" />
                                 <div class="col-6">
-                                    <p class="card-title">producto 1</p>
+                                    <p class="card-title fw-bold">producto 1</p>
                                     <p id="money"><b>$ 350.00</b> </p>
                                 </div>
 
@@ -322,7 +336,7 @@
                             <div class="card-body row mobile">
                                 <img class="col-6" src="https://picsum.photos/30/30" alt="product" />
                                 <div class="col-6">
-                                    <p class="card-title">producto 1</p>
+                                    <p class="card-title fw-bold">producto 1</p>
                                     <p id="money"><b>$ 350.00</b> </p>
                                 </div>
 
@@ -330,7 +344,7 @@
                             <div class="card-body row mobile">
                                 <img class="col-6" src="https://picsum.photos/30/30" alt="product" />
                                 <div class="col-6">
-                                    <p class="card-title">producto 1</p>
+                                    <p class="card-title fw-bold">producto 1</p>
                                     <p id="money"><b>$ 350.00</b> </p>
                                 </div>
 
@@ -339,32 +353,18 @@
                     </div>
                     <!--fin topRated-->
                     <!--imagen de abajo-->
-                    <div class="line"></div>
-                    <div id="image" class="row py-3 position-relative d-flex justify-content-center align-items-center">
-                        <div id="carouselExampleControls" class="carousel slide col-12 col-md-4 text-center" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://picsum.photos/270/400" class="d-block w-100" alt="image">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://picsum.photos/270/400" class="d-block w-100" alt="image">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://picsum.photos/270/400" class="d-block w-100" alt="image">
-                                </div>
+                    <div
+                        class="row border-bottom py-3 position-relative d-flex justify-content-center align-items-center">
+                        <img src="https://picsum.photos/200/200" class="img-fluid" alt="image">
+                        <div
+                            class="position-absolute d-flex justify-content-center align-items-center w-75 h-50 bg-dark text-light border border-4">
+                            <div class="over-img-promo text-center">
+                                <h3 class="border-bottom mb-3 py-3">Up to 30% off</h3>
+                                <p>En tiradores</p>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
-
                     </div>
-                    <div class="line"></div>
+
                 </div>
 
                 <div class="col-12 col-md-12 col-ms-12  col-lg-9 panelCenter center-mobile">
@@ -386,158 +386,8 @@
                     <div class="line"></div>
                     <div class="row  g-0">
                         <!-- CARD PRODUCTO : Alternativa bootstrap nativa-->
-                        <div class="card mb-3" id="items">
-                            <!--Producto 1-->
-                            <div class="card-body row ">
-                                <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
-                                    <!--la barra de navegacion botones-->
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
-                                            class="active"></button>
-                                        <button type="button" data-bs-target="#caruselIndicador"
-                                            data-bs-slide-to="1"></button>
-                                        <button type="button" data-bs-target="#caruselIndicador"
-                                            data-bs-slide-to="2"></button>
-                                    </div>
-                                    <!--item-->
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <!--aca adentro se pone lo q quieras dentro del carusel-->
-
-                                            <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
-                                        </div>
-                                    </div>
-                                    <!--flechitas para adelante y atras -contrles-->
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#caruselIndicador" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#caruselIndicador" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                    </button>
-                                </div>
-                                <div class="col-12 col-ms-12  col-md-12 col-lg-6">                                    
-                                    <h5 class="card-title mb-3 fw-bold">Tirador</h5>
-                                    <span class="fw-bold card-price">$250.00</span><br>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                   
-                                    <p class="card-text">PrESTE
-                                        mochila
-                                        🎒
-                                        con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
-                                        📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
-                                        adentro.<br>
-                                        📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
-                                        para
-                                        adentro). <br>
-                                    </p>
-                                    <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small>
-                                    </p>
-                                    <div class="card-btn-container btn-buy">
-
-                                        <button type="button" class="btn border-button" id="1"
-                                        onclick="addEl('1','tirador', 325, 'https://picsum.photos/270/400')">
-                                            <i class="fa-solid fa-cart-shopping "></i> Add to cart
-                                            
-                                        </button>
-                                        <button type="button" class="btn border-button">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                        <button type="button" class="btn border-button">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="card-body row ">
-                                <div id="caruselIndicador" class="carousel slide col-6" data-bs-ride="carousel">
-                                    <!--la barra de navegacion botones-->
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#caruselIndicador" data-bs-slide-to="0"
-                                            class="active"></button>
-                                        <button type="button" data-bs-target="#caruselIndicador"
-                                            data-bs-slide-to="1"></button>
-                                        <button type="button" data-bs-target="#caruselIndicador"
-                                            data-bs-slide-to="2"></button>
-                                    </div>
-                                    <!--item-->
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <!--aca adentro se pone lo q quieras dentro del carusel-->
-
-                                            <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="https://picsum.photos/270/400" alt="imagen" class="d-block w-100">
-                                        </div>
-                                    </div>
-                                    <!--flechitas para adelante y atras -contrles-->
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#caruselIndicador" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#caruselIndicador" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                    </button>
-                                </div>
-                                <div class="col-12 col-ms-12  col-md-12 col-lg-6">                                    
-                                    <h5 class="card-title mb-3 fw-bold">Tirador2</h5>
-                                    <span class="fw-bold card-price">$150.00</span><br>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star "></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                   
-                                    <p class="card-text">PrESTE
-                                        mochila
-                                        🎒
-                                        con DISTINTOS NOMBRES (nombre + promoaño) + sobrecito personalizado
-                                        📌Sobrecito personalizado con el nombre calado en el sobre para mirar para
-                                        adentro.<br>
-                                        📌Incluye sobrecito con manchitas y Egresados año + nombre calado (para ver
-                                        para
-                                        adentro). <br>
-                                    </p>
-                                    <p class="card-text my-3"><small class="text-muted">Shoes, T-shirt teen</small>
-                                    </p>
-                                    <div class="card-btn-container btn-buy">
-
-                                        <button type="button" class="btn border-button" id="1"
-                                        onclick="addEl('2','tirador2', 154, 'https://picsum.photos/270/400')">
-                                            <i class="fa-solid fa-cart-shopping "></i> Add to cart
-                                            
-                                        </button>
-                                        <button type="button" class="btn border-button">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                        <button type="button" class="btn border-button">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <!--fin producto-->
-                            
+                        <div class="card mb-3" id="productChartList">
+                           
                         </div>
                     </div>
                 </div>
@@ -610,7 +460,7 @@
         <div class="container-fluid text-white">
             <!--datos de contacto-->
             <div class="d-flex justify-content-start align-center gap-3">
-                <p>Copyright 2022 - All rights reserved </p><b>Luz</b>
+                <p>Copyright 2022 - All rights reserved </p><b>M. Luz</b>
             </div>
             <div class="d-flex float-end gap-3">
                 <i class="fa-brands fa-cc-visa"></i>

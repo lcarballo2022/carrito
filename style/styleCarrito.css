@@ -28,15 +28,18 @@ body{
   background-color: var(--principal-color) !important;
   color: white;
 }
+
+.btn-buyItem:hover{
+  background-color: var(--principal-color) !important;
+  color: white;
+}
 .fa-star{
   color: yellow;
 }
 .fa-star-half-stroke{
   color: yellow;
 }
-#colors{
-  border-bottom: 1px solid var(--line-color);
-}
+
 #money{
   color: var(--principal-color);
  
@@ -94,6 +97,9 @@ body{
   margin-top: 0.25rem!important;
   margin-bottom: 0.25rem!important;
 }
+.card-price{
+  color: var(--principal-color);
+}
 
 .list-group-item{
   border: none;
@@ -108,3 +114,78 @@ body{
   background-color: white;
 }
 
+/* media queries */
+@media(max-width:992px){
+  #image{
+      width: 100%;
+      display: none;
+  }
+  .navbar-icons-container{
+    justify-content: center;
+    margin: 1rem;
+}
+
+  .mobile, .center-mobile{
+      text-align: center;
+  }
+  #barraLeft{
+
+    display: none;
+  }
+ 
+  .card{
+    width: auto;
+  }
+  .column-mobile{
+    flex-direction: column;
+}
+#caruselIndicador{
+  display: none;
+}
+.btn-buy{
+ align-items: center;
+}
+
+}
+.navbar-icons-container i{
+  margin-right: 1rem;
+}
+
+.navbar-icons-container:last-child{
+  margin-right: 0;
+}
+
+@media (max-width:1024px){
+
+  body{
+      font-size: .8rem;
+  }
+  .navbar-icons-container{
+    justify-content: center;
+    margin: 1rem;
+}
+
+  .dropstart .dropdown-menu[data-bs-popper] {
+      top: 100%;
+      right: -100%;
+  }
+
+
+
+ .center-mobile{
+    text-align: center;
+}
+  .mobile{
+      display: none;   
+  }
+
+  .column-mobile{
+      flex-direction: column;
+  }
+  
+  .card{
+    width: auto;
+  }
+  
+
+}

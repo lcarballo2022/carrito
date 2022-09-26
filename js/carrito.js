@@ -104,10 +104,10 @@ function renderizarCarrito() {
   // Vaciamos todo el html
   DOMcarrito.textContent = '';
 
-  if (carrito!= null) /*{
+  if (carrito== null) {
     DOMtotal.textContent = "0";
     document.getElementById("catBuys").innerHTML = "0";
-  } else */{
+  } else {
     // Generamos los Nodos a partir de carrito
     carrito.forEach((item) => {
 
@@ -146,8 +146,7 @@ function renderizarCarrito() {
     DOMtotal.textContent = calcularTotal() + divisa;
     document.getElementById("catBuys").innerHTML = cantElement();
   }
-  DOMtotal.textContent = calcularTotal() + divisa;
-  document.getElementById("catBuys").innerHTML = cantElement();
+ 
 }
 
 /**
